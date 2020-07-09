@@ -1,0 +1,5 @@
+FROM golang:1.11-alpine3.9
+EXPOSE 8080
+COPY ./main.go ./
+RUN go build -o main main.go
+ENTRYPOINT ["./main"]
